@@ -1,26 +1,24 @@
 package me.dhl.common
 
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
-import androidx.compose.material.Button
 import androidx.compose.runtime.*
 import me.dhl.common.model.Article
 import me.dhl.common.vm.ArticleViewModel
-import me.dhl.common.model.Repository
+
 
 
 @Composable
 fun App() {
-
-    Column {
-        val apiService = RetrofitManager.apiService
-        val repo = Repository(apiService)
-        val articleViewModel = ArticleViewModel(repo)
-        articleViewModel.fetchArticles(0)
-        ArticleListScreen(articleViewModel)
-    }
+    SideNavDemo()
+//    Column {
+//        val apiService = RetrofitManager.apiService
+//        val repo = Repository(apiService)
+//        val articleViewModel = ArticleViewModel(repo)
+//        articleViewModel.fetchArticles(0)
+//        ArticleListScreen(articleViewModel)
+//    }
 }
 
 @Composable
